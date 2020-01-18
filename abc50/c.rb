@@ -12,28 +12,26 @@ abs_list = gets.split(' ').map(&:to_i)
 # n = 8
 # abs_list = '7 5 1 1 7 3 5 3'.split(" ").map(&:to_i)
 
-grouped_abs_list = abs_list.group_by { |i| i }
+# n = 9
+# abs_list = '8 8 6 6 4 4 2 2 0'.split(" ").map(&:to_i)
 
-expected_list = (0..n).select { |d|
+sorted_abs_list = abs_list.sort
+
+expected_list = (1..n).select { |d|
   if n.odd?
     (d % 2).even?
   else
     (d % 2).odd?
   end
-}.map { |d|
-  if d == 0
-    [d, 1]
-  else
-    [d, 2]
-  end
-}.to_h
+}
 
-if grouped_abs_list.map { |k, v| [k, v.size] }.to_h == expected_list
-  print("#{if n.odd?
-    2 ** (grouped_abs_list.size - 1)
-  else
-    2 ** grouped_abs_list.size
-  end}\n")
+expected_list += expected_list
+sorted_abs_list -= [0]
+sorted_expected_list = expected_list.sort
+
+mod = 10 ** 9 + 7
+if sorted_abs_list == sorted_expected_list
+  print("#{2 ** (n / 2) % mod}\n")
 else
   print "0\n"
 end
