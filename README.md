@@ -1,1 +1,1 @@
-# atcoder
+# Algorithm playground
