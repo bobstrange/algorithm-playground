@@ -1,0 +1,21 @@
+{
+  "name": "book-memo",
+  "version": "0.0.1",
+  "description": "[ref](https://www.kspub.co.jp/book/detail/5128442.html)",
+  "main": "index.js",
+  "scripts": {
+    "format": "prettier ./**/*.{js,ts} --write"
+  },
+  "keywords": [],
+  "author": "bobstrange <bob.1983.g@gmail.com> (https://github.com/bobstrange)",
+  "license": "MIT",
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^4.15.2",
+    "@typescript-eslint/parser": "^4.15.2",
+    "eslint": "^7.20.0",
+    "eslint-config-prettier": "^8.1.0",
+    "prettier": "^2.2.1",
+    "ts-node": "^9.1.1",
+    "typescript": "^4.2.2"
+  }
+}
