@@ -15,7 +15,7 @@ function twoSum(nums: number[], target: number): number[] {
   // My Solution
   // Hash Table を利用して、対応する値の lookup のオーダーを O(1) にする
   // Two-pass Hash Table と言うらしい
-  const numMap = nums.reduce((acc, cur, idx) => {
+  const numMap = nums.reduce((acc: { [k: number]: number }, cur, idx) => {
     acc[cur] = idx;
     return acc;
   }, {});
