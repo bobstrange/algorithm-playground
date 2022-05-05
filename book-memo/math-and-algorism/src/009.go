@@ -18,21 +18,24 @@ func main() {
 	var n, s int
 	fmt.Scan(&n, &s)
 
-	a := make([]int, n)
-	for i := 0; i < n; i++ {
+	a := make([]int, n+1)
+	for i := 1; i <= n; i++ {
 		fmt.Scan(&a[i])
 	}
 
 	dp := make([][]int, n+1)
-	for i := 0; i < n; i++ {
+	for i := 0; i <= n; i++ {
 		dp[i] = make([]int, s+1)
 		for j := 0; j <= s; j++ {
 			dp[i][j] = -10000
 		}
 	}
-	dp[0][0] = 0
+	for i := 0; i <= s; i++ {
+		dp[0][i] = 0
+	}
+	fmt.Println(dp)
 
-	for i := 1; i < n; i++ {
+	for i := 1; i <= n; i++ {
 		for j := 0; j <= s; j++ {
 			if j < a[i] {
 				dp[i-1][j] = dp[i][j]
