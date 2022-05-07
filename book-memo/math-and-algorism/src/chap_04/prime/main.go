@@ -3,7 +3,7 @@ package main
 import "fmt"
 
 func main() {
-	n := 1000000
+	n := 1000
 	prime := make([]bool, n+1)
 
 	for i := 2; i <= n; i++ {
