@@ -1,6 +1,7 @@
 import { assertEquals } from "../deps.ts";
-import { ListNode, getListValues, createList } from "./util.ts";
+import { ListNode, createList } from "./util.ts";
 
+// With recursion
 function mergeTwoLists(
   list1: ListNode | null,
   list2: ListNode | null
