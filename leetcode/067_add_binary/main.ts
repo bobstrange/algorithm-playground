@@ -14,8 +14,6 @@ function addBinary(a: string, b: string): string {
     const aDigit = a[i];
     const bDigit = b[i];
 
-    console.log("i:", i, "aDigit:", aDigit, "bDigit:", bDigit, "carry:", carry);
-
     let count = 0;
     if (aDigit === "1") {
       count++;
