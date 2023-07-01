@@ -11,7 +11,29 @@ class TreeNode {
   }
 }
 
-function inorderTraversal(root: TreeNode | null): number[] {}
+function inorderTraversal(root: TreeNode | null): number[] {
+  if (root === null) {
+    return [];
+  }
+
+  const result: number[] = [];
+  const stack: TreeNode[] = [];
+
+  let curr: TreeNode | null = root;
+
+  while (curr !== null || stack.length > 0) {
+    while (curr !== null) {
+      stack.push(curr);
+      curr = curr.left;
+    }
+
+    curr = stack.pop()!;
+    result.push(curr.val);
+    curr = curr.right;
+  }
+
+  return result;
+}
 
 Deno.test("inorderTraversal([1,null,2,3]) returns [1,3,2]", () => {
   const input = new TreeNode(1, null, new TreeNode(2, new TreeNode(3), null));
