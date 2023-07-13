@@ -1,4 +1,4 @@
-import { assertEquals } from "../deps.ts";
+import { assertEquals } from "$std/testing/asserts.ts";
 
 // with splice (slower)
 function removeDuplicates(nums: number[]): number {

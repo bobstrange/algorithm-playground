@@ -1,4 +1,4 @@
-import { assertEquals } from "../deps.ts";
+import { assertEquals } from "$std/testing/asserts.ts";
 
 function lengthOfLastWord(s: string): number {
   // i を 0 から length までインクリメントする

@@ -1,4 +1,4 @@
-import { assertEquals } from "../deps.ts";
+import { assertEquals } from "$std/testing/asserts.ts";
 
 type Roman = "I" | "V" | "X" | "L" | "C" | "D" | "M";
 function romanToInt(s: string): number {

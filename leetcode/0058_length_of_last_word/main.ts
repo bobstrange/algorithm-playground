@@ -1,4 +1,4 @@
-import { assertEquals } from "../deps.ts";
+import { assertEquals } from "$std/testing/asserts.ts";
 
 function lengthOfLastWord(s: string): number {
   const words = s.split(" ").filter((word) => word.length > 0);

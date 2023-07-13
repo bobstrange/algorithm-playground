@@ -1,4 +1,4 @@
-import { assertEquals } from "../deps.ts";
+import { assertEquals } from "$std/testing/asserts.ts";
 
 function plusOne(digits: number[]): number[] {
   let carry = 1; // 初めの +1 を carry = 1 で表現する

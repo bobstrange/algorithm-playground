@@ -1,4 +1,4 @@
-import { assertEquals } from "../deps.ts";
+import { assertEquals } from "$std/testing/asserts.ts";
 
 function strStr(haystack: string, needle: string): number {
   if (needle.length === 0) return 0;

@@ -1,4 +1,4 @@
-import { assertEquals } from "../deps.ts";
+import { assertEquals } from "$std/testing/asserts.ts";
 import { ListNode, createList } from "./util.ts";
 
 // With recursion
